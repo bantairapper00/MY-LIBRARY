@@ -31,23 +31,24 @@
         <h1 id="my-lib">My Library</h1>
         <hr style="margin: 10px 0; border-top:1px solid rgb(173, 159, 159);">
 
-            <div class="form">
-                <p>Name</p>
-                <input type="text" placeholder="Book Name" class="bookBox">
+        <div class="form">
+            <p>Name</p>
+            <input type="text" placeholder="Book Name" class="bookBox">
+        </div>
+        <div class="form">
+            <p>Author</p>
+            <input type="text" placeholder="Author">
+        </div>
+        <div class="form">
+            <p>Type:</p>
+            <div class="radio">
+                <div><input type="radio" name="mytype">Fiction</div>
+                <div><input type="radio" name="mytype">Computer programming</div>
+                <div><input type="radio" name="mytype">Manga</div>
+                <div><input type="radio" name="mytype">Cooking</div>
             </div>
-            <div class="form">
-                <p>Author</p>
-                <input type="text" placeholder="Author">
-            </div>
-            <div class="form">
-                <p>Type:</p>
-                <div class="radio">
-                    <div><input type="radio" name="mytype">Fiction</div>
-                    <div><input type="radio" name="mytype">Computer programming</div>
-                    <div><input type="radio" name="mytype">Manga</div>
-                    <div><input type="radio" name="mytype">Cooking</div>
-                </div>
-            </div>
+        </div>
+        <button id="addbookBtn">Add Book</button>
     </section>
 
 </body>
