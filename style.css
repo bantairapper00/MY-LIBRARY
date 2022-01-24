@@ -84,20 +84,35 @@ body{
 }
 
 .container{
-    display: block;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto;
     width: 85%;
     background-color: #F2EAD7;
     border-radius: 10px;
-    margin-bottom: 40px;
+    padding: 20px 70px;
 }
 
 #my-lib{
-    margin-left: 70px;
-    padding-top: 20px;
     font-size: 40px;
     letter-spacing: 2px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.form p{
+    width: 150px;
+    font-size: 17px;
+
+}
+
+.form input{
+    padding: 9px;
+    width: 480px;
+    border-radius: 6px;
 }
 
 
