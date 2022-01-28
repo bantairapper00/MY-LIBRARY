@@ -13,12 +13,12 @@ Display.prototype.add = function (bookObj) {
     tableBOdy.innerHTML = "";
     Array.from(bookObj).forEach(function (element,index) {
         tableBOdy.innerHTML +=
-        `<tr>
-        <td>${index+1}</td>
-        <td>${element.name}</td>
-        <td>${element.author}</td>
-        <td>${element.type}</td>
-        <td><img onClick="deleteBook(${index})" src="./images/delete.png" class="deleteBtn"></td>
+        `<tr class="table-content">
+            <td>${index+1}</td>
+            <td>${element.name}</td>
+            <td>${element.author}</td>
+            <td>${element.type}</td>
+            <td><img onClick="deleteBook(${index})" src="./images/delete.png" class="deleteBtn"></td>
         </tr>`
     });
 }
@@ -96,3 +96,28 @@ addBtn.addEventListener("click", function () {
     
     display.clear();
 })
+
+
+let search = document.getElementById("searchBox");
+search.addEventListener("input", function(){
+    console.log("hello");
+    let input = search.value;
+    console.log(input)
+    let tableContent = document.getElementsByClassName("table-content");
+    Array.from(tableContent).forEach(function(element, index){
+        let num = element.getElementsByTagName("td")[0].innerText;
+        let name = element.getElementsByTagName("td")[1].innerText;
+        let author = element.getElementsByTagName("td")[2].innerText;
+        let type = element.getElementsByTagName("td")[3].innerText;
+
+        if(num.includes(input) || name.includes(input) || author.includes(input) || type.includes(input)){
+            element.style.display = "table-row"
+        }
+        else{
+            element.style.display = "none";
+        }
+    })
+
+})
+
+
